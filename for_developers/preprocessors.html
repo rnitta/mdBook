@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Preprocessors - mdBook Documentation</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Create book from markdown files. Like Gitbook but implemented in Rust">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +37,10 @@
     </head>
     <body class="light">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "../";</script>
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -56,8 +61,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -75,7 +80,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> mdBook</a></li><li><a href="../cli/index.html"><strong aria-hidden="true">2.</strong> Command Line Tool</a></li><li><ol class="section"><li><a href="../cli/init.html"><strong aria-hidden="true">2.1.</strong> init</a></li><li><a href="../cli/build.html"><strong aria-hidden="true">2.2.</strong> build</a></li><li><a href="../cli/watch.html"><strong aria-hidden="true">2.3.</strong> watch</a></li><li><a href="../cli/serve.html"><strong aria-hidden="true">2.4.</strong> serve</a></li><li><a href="../cli/test.html"><strong aria-hidden="true">2.5.</strong> test</a></li><li><a href="../cli/clean.html"><strong aria-hidden="true">2.6.</strong> clean</a></li></ol></li><li><a href="../format/index.html"><strong aria-hidden="true">3.</strong> Format</a></li><li><ol class="section"><li><a href="../format/summary.html"><strong aria-hidden="true">3.1.</strong> SUMMARY.md</a></li><li><a href="../format/config.html"><strong aria-hidden="true">3.2.</strong> Configuration</a></li><li><a href="../format/theme/index.html"><strong aria-hidden="true">3.3.</strong> Theme</a></li><li><ol class="section"><li><a href="../format/theme/index-hbs.html"><strong aria-hidden="true">3.3.1.</strong> index.hbs</a></li><li><a href="../format/theme/syntax-highlighting.html"><strong aria-hidden="true">3.3.2.</strong> Syntax highlighting</a></li><li><a href="../format/theme/editor.html"><strong aria-hidden="true">3.3.3.</strong> Editor</a></li></ol></li><li><a href="../format/mathjax.html"><strong aria-hidden="true">3.4.</strong> MathJax Support</a></li><li><a href="../format/mdbook.html"><strong aria-hidden="true">3.5.</strong> mdBook specific features</a></li></ol></li><li><a href="../continuous-integration.html"><strong aria-hidden="true">4.</strong> Continuous Integration</a></li><li><a href="../for_developers/index.html"><strong aria-hidden="true">5.</strong> For Developers</a></li><li><ol class="section"><li><a href="../for_developers/preprocessors.html" class="active"><strong aria-hidden="true">5.1.</strong> Preprocessors</a></li><li><a href="../for_developers/backends.html"><strong aria-hidden="true">5.2.</strong> Alternate Backends</a></li><li class="spacer"></li></ol></li><li><a href="../misc/contributors.html">Contributors</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> mdBook</a></li><li><a href="../cli/index.html"><strong aria-hidden="true">2.</strong> Command Line Tool</a></li><li><ol class="section"><li><a href="../cli/init.html"><strong aria-hidden="true">2.1.</strong> init</a></li><li><a href="../cli/build.html"><strong aria-hidden="true">2.2.</strong> build</a></li><li><a href="../cli/watch.html"><strong aria-hidden="true">2.3.</strong> watch</a></li><li><a href="../cli/serve.html"><strong aria-hidden="true">2.4.</strong> serve</a></li><li><a href="../cli/test.html"><strong aria-hidden="true">2.5.</strong> test</a></li><li><a href="../cli/clean.html"><strong aria-hidden="true">2.6.</strong> clean</a></li></ol></li><li><a href="../format/index.html"><strong aria-hidden="true">3.</strong> Format</a></li><li><ol class="section"><li><a href="../format/summary.html"><strong aria-hidden="true">3.1.</strong> SUMMARY.md</a></li><li><a href="../format/config.html"><strong aria-hidden="true">3.2.</strong> Configuration</a></li><li><a href="../format/theme/index.html"><strong aria-hidden="true">3.3.</strong> Theme</a></li><li><ol class="section"><li><a href="../format/theme/index-hbs.html"><strong aria-hidden="true">3.3.1.</strong> index.hbs</a></li><li><a href="../format/theme/syntax-highlighting.html"><strong aria-hidden="true">3.3.2.</strong> Syntax highlighting</a></li><li><a href="../format/theme/editor.html"><strong aria-hidden="true">3.3.3.</strong> Editor</a></li></ol></li><li><a href="../format/mathjax.html"><strong aria-hidden="true">3.4.</strong> MathJax Support</a></li><li><a href="../format/mdbook.html"><strong aria-hidden="true">3.5.</strong> mdBook specific features</a></li></ol></li><li><a href="../continuous-integration.html"><strong aria-hidden="true">4.</strong> Continuous Integration</a></li><li><a href="../for_developers/index.html"><strong aria-hidden="true">5.</strong> For Developers</a></li><li><ol class="section"><li><a href="../for_developers/preprocessors.html" class="active"><strong aria-hidden="true">5.1.</strong> Preprocessors</a></li><li><a href="../for_developers/backends.html"><strong aria-hidden="true">5.2.</strong> Alternate Backends</a></li><li class="spacer"></li></ol></li><li><a href="../misc/contributors.html">Contributors</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -92,7 +100,7 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -105,12 +113,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">mdBook Documentation</h1> 
+                        <h1 class="menu-title">mdBook Documentation</h1>
 
                         <div class="right-buttons">
                             <a href="../print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -150,61 +159,171 @@ to <code>[some chapter](some_chapter.html)</code> for the HTML renderer</li>
 <li>Substituting in latex-style expressions (<code>$$ \frac{1}{3} $$</code>) with their
 mathjax equivalents</li>
 </ul>
-<a class="header" href="#implementing-a-preprocessor" id="implementing-a-preprocessor"><h2>Implementing a Preprocessor</h2></a>
-<p>A preprocessor is represented by the <code>Preprocessor</code> trait.</p>
-<pre><pre class="playpen"><code class="language-rust">
-# #![allow(unused_variables)]
-#fn main() {
-pub trait Preprocessor {
-    fn name(&amp;self) -&gt; &amp;str;
-    fn run(&amp;self, ctx: &amp;PreprocessorContext, book: &amp;mut Book) -&gt; Result&lt;()&gt;;
+<a class="header" href="#hooking-into-mdbook" id="hooking-into-mdbook"><h2>Hooking Into MDBook</h2></a>
+<p>MDBook uses a fairly simple mechanism for discovering third party plugins.
+A new table is added to <code>book.toml</code> (e.g. <code>preprocessor.foo</code> for the <code>foo</code>
+preprocessor) and then <code>mdbook</code> will try to invoke the <code>mdbook-foo</code> program as
+part of the build process.</p>
+<p>While preprocessors can be hard-coded to specify which backend it should be run
+for (e.g. it doesn't make sense for MathJax to be used for non-HTML renderers)
+with the <code>preprocessor.foo.renderer</code> key.</p>
+<pre><code class="language-toml">[book]
+title = &quot;My Book&quot;
+authors = [&quot;Michael-F-Bryan&quot;]
+
+[preprocessor.foo]
+# The command can also be specified manually
+command = &quot;python3 /path/to/foo.py&quot;
+# Only run the `foo` preprocessor for the HTML and EPUB renderer
+renderer = [&quot;html&quot;, &quot;epub&quot;]
+</code></pre>
+<p>In typical unix style, all inputs to the plugin will be written to <code>stdin</code> as
+JSON and <code>mdbook</code> will read from <code>stdout</code> if it is expecting output.</p>
+<p>The easiest way to get started is by creating your own implementation of the
+<code>Preprocessor</code> trait (e.g. in <code>lib.rs</code>) and then creating a shell binary which
+translates inputs to the correct <code>Preprocessor</code> method. For convenience, there
+is <a href="https://github.com/rust-lang-nursery/mdBook/blob/master/examples/nop-preprocessor.rs">an example no-op preprocessor</a> in the <code>examples/</code> directory which can easily
+be adapted for other preprocessors.</p>
+<p><details>
+<summary>Example no-op preprocessor</summary></p>
+<pre><pre class="playpen"><code class="language-rust">// nop-preprocessors.rs
+
+extern crate clap;
+extern crate mdbook;
+extern crate serde_json;
+
+use clap::{App, Arg, ArgMatches, SubCommand};
+use mdbook::book::Book;
+use mdbook::errors::Error;
+use mdbook::preprocess::{CmdPreprocessor, Preprocessor, PreprocessorContext};
+use nop_lib::Nop;
+use std::io;
+use std::process;
+
+pub fn make_app() -&gt; App&lt;'static, 'static&gt; {
+    App::new(&quot;nop-preprocessor&quot;)
+        .about(&quot;A mdbook preprocessor which does precisely nothing&quot;)
+        .subcommand(
+            SubCommand::with_name(&quot;supports&quot;)
+                .arg(Arg::with_name(&quot;renderer&quot;).required(true))
+                .about(&quot;Check whether a renderer is supported by this preprocessor&quot;),
+        )
 }
-#}</code></pre></pre>
-<p>Where the <code>PreprocessorContext</code> is defined as</p>
-<pre><pre class="playpen"><code class="language-rust">
-# #![allow(unused_variables)]
-#fn main() {
-pub struct PreprocessorContext {
-    pub root: PathBuf,
-    pub config: Config,
+
+fn main() {
+    let matches = make_app().get_matches();
+
+    // Users will want to construct their own preprocessor here
+    let preprocessor = Nop::new();
+
+    if let Some(sub_args) = matches.subcommand_matches(&quot;supports&quot;) {
+        handle_supports(&amp;preprocessor, sub_args);
+    } else if let Err(e) = handle_preprocessing(&amp;preprocessor) {
+        eprintln!(&quot;{}&quot;, e);
+        process::exit(1);
+    }
 }
-#}</code></pre></pre>
-<a class="header" href="#a-complete-example" id="a-complete-example"><h2>A complete Example</h2></a>
-<p>The magic happens within the <code>run(...)</code> method of the
-<a href="https://docs.rs/mdbook/0.1.3/mdbook/preprocess/trait.Preprocessor.html"><code>Preprocessor</code></a> trait implementation.</p>
-<p>As direct access to the chapters is not possible, you will probably end up
-iterating them using <code>for_each_mut(...)</code>:</p>
+
+fn handle_preprocessing(pre: &amp;dyn Preprocessor) -&gt; Result&lt;(), Error&gt; {
+    let (ctx, book) = CmdPreprocessor::parse_input(io::stdin())?;
+
+    if ctx.mdbook_version != mdbook::MDBOOK_VERSION {
+        // We should probably use the `semver` crate to check compatibility
+        // here...
+        eprintln!(
+            &quot;Warning: The {} plugin was built against version {} of mdbook, \
+             but we're being called from version {}&quot;,
+            pre.name(),
+            mdbook::MDBOOK_VERSION,
+            ctx.mdbook_version
+        );
+    }
+
+    let processed_book = pre.run(&amp;ctx, book)?;
+    serde_json::to_writer(io::stdout(), &amp;processed_book)?;
+
+    Ok(())
+}
+
+fn handle_supports(pre: &amp;dyn Preprocessor, sub_args: &amp;ArgMatches) -&gt; ! {
+    let renderer = sub_args.value_of(&quot;renderer&quot;).expect(&quot;Required argument&quot;);
+    let supported = pre.supports_renderer(&amp;renderer);
+
+    // Signal whether the renderer is supported by exiting with 1 or 0.
+    if supported {
+        process::exit(0);
+    } else {
+        process::exit(1);
+    }
+}
+
+/// The actual implementation of the `Nop` preprocessor. This would usually go
+/// in your main `lib.rs` file.
+mod nop_lib {
+    use super::*;
+
+    /// A no-op preprocessor.
+    pub struct Nop;
+
+    impl Nop {
+        pub fn new() -&gt; Nop {
+            Nop
+        }
+    }
+
+    impl Preprocessor for Nop {
+        fn name(&amp;self) -&gt; &amp;str {
+            &quot;nop-preprocessor&quot;
+        }
+
+        fn run(&amp;self, ctx: &amp;PreprocessorContext, book: Book) -&gt; Result&lt;Book, Error&gt; {
+            // In testing we want to tell the preprocessor to blow up by setting a
+            // particular config value
+            if let Some(nop_cfg) = ctx.config.get_preprocessor(self.name()) {
+                if nop_cfg.contains_key(&quot;blow-up&quot;) {
+                    return Err(&quot;Boom!!1!&quot;.into());
+                }
+            }
+
+            // we *are* a no-op preprocessor after all
+            Ok(book)
+        }
+
+        fn supports_renderer(&amp;self, renderer: &amp;str) -&gt; bool {
+            renderer != &quot;not-supported&quot;
+        }
+    }
+}
+
+</code></pre></pre>
+<p></details></p>
+<a class="header" href="#hints-for-implementing-a-preprocessor" id="hints-for-implementing-a-preprocessor"><h2>Hints For Implementing A Preprocessor</h2></a>
+<p>By pulling in <code>mdbook</code> as a library, preprocessors can have access to the
+existing infrastructure for dealing with books.</p>
+<p>For example, a custom preprocessor could use the
+<a href="https://docs.rs/mdbook/latest/mdbook/preprocess/trait.Preprocessor.html#method.parse_input"><code>CmdPreprocessor::parse_input()</code></a> function to deserialize the JSON written to
+<code>stdin</code>. Then each chapter of the <code>Book</code> can be mutated in-place via
+<a href="https://docs.rs/mdbook/latest/mdbook/book/struct.Book.html#method.for_each_mut"><code>Book::for_each_mut()</code></a>, and then written to <code>stdout</code> with the <code>serde_json</code>
+crate.</p>
+<p>Chapters can be accessed either directly (by recursively iterating over
+chapters) or via the <code>Book::for_each_mut()</code> convenience method.</p>
+<p>The <code>chapter.content</code> is just a string which happens to be markdown. While it's
+entirely possible to use regular expressions or do a manual find &amp; replace,
+you'll probably want to process the input into something more computer-friendly.
+The <a href="https://crates.io/crates/pulldown-cmark"><code>pulldown-cmark</code></a> crate implements a production-quality event-based
+Markdown parser, with the <a href="https://crates.io/crates/pulldown-cmark-to-cmark"><code>pulldown-cmark-to-cmark</code></a> allowing you to
+translate events back into markdown text.</p>
+<p>The following code block shows how to remove all emphasis from markdown,
+without accidentally breaking the document.</p>
 <pre><pre class="playpen"><code class="language-rust">
 # #![allow(unused_variables)]
 #fn main() {
-book.for_each_mut(|item: &amp;mut BookItem| {
-    if let BookItem::Chapter(ref mut chapter) = *item {
-      eprintln!(&quot;{}: processing chapter '{}'&quot;, self.name(), chapter.name);
-      res = Some(
-          match Deemphasize::remove_emphasis(&amp;mut num_removed_items, chapter) {
-              Ok(md) =&gt; {
-                  chapter.content = md;
-                  Ok(())
-              }
-              Err(err) =&gt; Err(err),
-          },
-      );
-  }
-});
-#}</code></pre></pre>
-<p>The <code>chapter.content</code> is just a markdown formatted string, and you will have to
-process it in some way. Even though it's entirely possible to implement some
-sort of manual find &amp; replace operation, if that feels too unsafe you can use
-<a href="https://crates.io/crates/pulldown-cmark"><code>pulldown-cmark</code></a> to parse the string into events and work on them instead.</p>
-<p>Finally you can use <a href="https://crates.io/crates/pulldown-cmark-to-cmark"><code>pulldown-cmark-to-cmark</code></a> to transform these events
-back to a string.</p>
-<p>The following code block shows how to remove all emphasis from markdown, and do
-so safely.</p>
-<pre><pre class="playpen"><code class="language-rust">
-# #![allow(unused_variables)]
-#fn main() {
-fn remove_emphasis(num_removed_items: &amp;mut i32, chapter: &amp;mut Chapter) -&gt; Result&lt;String&gt; {
+fn remove_emphasis(
+    num_removed_items: &amp;mut usize,
+    chapter: &amp;mut Chapter,
+) -&gt; Result&lt;String&gt; {
     let mut buf = String::with_capacity(chapter.content.len());
+
     let events = Parser::new(&amp;chapter.content).filter(|e| {
         let should_keep = match *e {
             Event::Start(Tag::Emphasis)
@@ -218,9 +337,10 @@ fn remove_emphasis(num_removed_items: &amp;mut i32, chapter: &amp;mut Chapter) -
         }
         should_keep
     });
-    cmark(events, &amp;mut buf, None)
-        .map(|_| buf)
-        .map_err(|err| Error::from(format!(&quot;Markdown serialization failed: {}&quot;, err)))
+
+    cmark(events, &amp;mut buf, None).map(|_| buf).map_err(|err| {
+        Error::from(format!(&quot;Markdown serialization failed: {}&quot;, err))
+    })
 }
 #}</code></pre></pre>
 <p>For everything else, have a look <a href="https://github.com/rust-lang-nursery/mdBook/blob/master/examples/de-emphasize.rs">at the complete example</a>.</p>

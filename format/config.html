@@ -4,6 +4,8 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Configuration - mdBook Documentation</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Create book from markdown files. Like Gitbook but implemented in Rust">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +37,10 @@
     </head>
     <body class="light">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">var path_to_root = "../";</script>
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
@@ -56,8 +61,8 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
-            if (theme === null || theme === undefined) { theme = 'light'; }
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
             document.body.className = theme;
             document.querySelector('html').className = theme + ' js';
         </script>
@@ -75,7 +80,10 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> mdBook</a></li><li><a href="../cli/index.html"><strong aria-hidden="true">2.</strong> Command Line Tool</a></li><li><ol class="section"><li><a href="../cli/init.html"><strong aria-hidden="true">2.1.</strong> init</a></li><li><a href="../cli/build.html"><strong aria-hidden="true">2.2.</strong> build</a></li><li><a href="../cli/watch.html"><strong aria-hidden="true">2.3.</strong> watch</a></li><li><a href="../cli/serve.html"><strong aria-hidden="true">2.4.</strong> serve</a></li><li><a href="../cli/test.html"><strong aria-hidden="true">2.5.</strong> test</a></li><li><a href="../cli/clean.html"><strong aria-hidden="true">2.6.</strong> clean</a></li></ol></li><li><a href="../format/index.html"><strong aria-hidden="true">3.</strong> Format</a></li><li><ol class="section"><li><a href="../format/summary.html"><strong aria-hidden="true">3.1.</strong> SUMMARY.md</a></li><li><a href="../format/config.html" class="active"><strong aria-hidden="true">3.2.</strong> Configuration</a></li><li><a href="../format/theme/index.html"><strong aria-hidden="true">3.3.</strong> Theme</a></li><li><ol class="section"><li><a href="../format/theme/index-hbs.html"><strong aria-hidden="true">3.3.1.</strong> index.hbs</a></li><li><a href="../format/theme/syntax-highlighting.html"><strong aria-hidden="true">3.3.2.</strong> Syntax highlighting</a></li><li><a href="../format/theme/editor.html"><strong aria-hidden="true">3.3.3.</strong> Editor</a></li></ol></li><li><a href="../format/mathjax.html"><strong aria-hidden="true">3.4.</strong> MathJax Support</a></li><li><a href="../format/mdbook.html"><strong aria-hidden="true">3.5.</strong> mdBook specific features</a></li></ol></li><li><a href="../continuous-integration.html"><strong aria-hidden="true">4.</strong> Continuous Integration</a></li><li><a href="../for_developers/index.html"><strong aria-hidden="true">5.</strong> For Developers</a></li><li><ol class="section"><li><a href="../for_developers/preprocessors.html"><strong aria-hidden="true">5.1.</strong> Preprocessors</a></li><li><a href="../for_developers/backends.html"><strong aria-hidden="true">5.2.</strong> Alternate Backends</a></li><li class="spacer"></li></ol></li><li><a href="../misc/contributors.html">Contributors</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> mdBook</a></li><li><a href="../cli/index.html"><strong aria-hidden="true">2.</strong> Command Line Tool</a></li><li><ol class="section"><li><a href="../cli/init.html"><strong aria-hidden="true">2.1.</strong> init</a></li><li><a href="../cli/build.html"><strong aria-hidden="true">2.2.</strong> build</a></li><li><a href="../cli/watch.html"><strong aria-hidden="true">2.3.</strong> watch</a></li><li><a href="../cli/serve.html"><strong aria-hidden="true">2.4.</strong> serve</a></li><li><a href="../cli/test.html"><strong aria-hidden="true">2.5.</strong> test</a></li><li><a href="../cli/clean.html"><strong aria-hidden="true">2.6.</strong> clean</a></li></ol></li><li><a href="../format/index.html"><strong aria-hidden="true">3.</strong> Format</a></li><li><ol class="section"><li><a href="../format/summary.html"><strong aria-hidden="true">3.1.</strong> SUMMARY.md</a></li><li><a href="../format/config.html" class="active"><strong aria-hidden="true">3.2.</strong> Configuration</a></li><li><a href="../format/theme/index.html"><strong aria-hidden="true">3.3.</strong> Theme</a></li><li><ol class="section"><li><a href="../format/theme/index-hbs.html"><strong aria-hidden="true">3.3.1.</strong> index.hbs</a></li><li><a href="../format/theme/syntax-highlighting.html"><strong aria-hidden="true">3.3.2.</strong> Syntax highlighting</a></li><li><a href="../format/theme/editor.html"><strong aria-hidden="true">3.3.3.</strong> Editor</a></li></ol></li><li><a href="../format/mathjax.html"><strong aria-hidden="true">3.4.</strong> MathJax Support</a></li><li><a href="../format/mdbook.html"><strong aria-hidden="true">3.5.</strong> mdBook specific features</a></li></ol></li><li><a href="../continuous-integration.html"><strong aria-hidden="true">4.</strong> Continuous Integration</a></li><li><a href="../for_developers/index.html"><strong aria-hidden="true">5.</strong> For Developers</a></li><li><ol class="section"><li><a href="../for_developers/preprocessors.html"><strong aria-hidden="true">5.1.</strong> Preprocessors</a></li><li><a href="../for_developers/backends.html"><strong aria-hidden="true">5.2.</strong> Alternate Backends</a></li><li class="spacer"></li></ol></li><li><a href="../misc/contributors.html">Contributors</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -92,7 +100,7 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -105,12 +113,13 @@
                             
                         </div>
 
-                        <h1 class="menu-title">mdBook Documentation</h1> 
+                        <h1 class="menu-title">mdBook Documentation</h1>
 
                         <div class="right-buttons">
                             <a href="../print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -151,6 +160,10 @@ description = &quot;The example book covers examples.&quot;
 build-dir = &quot;my-example-book&quot;
 create-missing = false
 
+[preprocess.index]
+
+[preprocess.links]
+
 [output.html]
 additional-css = [&quot;custom.css&quot;]
 
@@ -182,20 +195,36 @@ src = &quot;my-src&quot;  # the source files will be found in `root/my-src` inst
 <a class="header" href="#build-options" id="build-options"><h3>Build options</h3></a>
 <p>This controls the build process of your book.</p>
 <ul>
-<li><strong>build-dir:</strong> The directory to put the rendered book in. By default this is
-<code>book/</code> in the book's root directory.</li>
-<li><strong>create-missing:</strong> By default, any missing files specified in <code>SUMMARY.md</code>
+<li>
+<p><strong>build-dir:</strong> The directory to put the rendered book in. By default this is
+<code>book/</code> in the book's root directory.</p>
+</li>
+<li>
+<p><strong>create-missing:</strong> By default, any missing files specified in <code>SUMMARY.md</code>
 will be created when the book is built (i.e. <code>create-missing = true</code>). If this
 is <code>false</code> then the build process will instead exit with an error if any files
-do not exist.</li>
-<li><strong>preprocess:</strong> Specify which preprocessors to be applied. Default is
-<code>[&quot;links&quot;, &quot;index&quot;]</code>. To disable default preprocessors, pass an empty array
-<code>[]</code> in.</li>
+do not exist.</p>
+</li>
+<li>
+<p><strong>use-default-preprocessors:</strong> Disable the default preprocessors of (<code>links</code> &amp;
+<code>index</code>) by setting this option to <code>false</code>.</p>
+<p>If you have the same, and/or other preprocessors declared via their table
+of configuration, they will run instead.</p>
+<ul>
+<li>For clarity, with no preprocessor configuration, the default <code>links</code> and
+<code>index</code> will run.</li>
+<li>Setting <code>use-default-preprocessors = false</code> will disable these
+default preprocessors from running.</li>
+<li>Adding <code>[preprocessor.links]</code>, for example, will ensure, regardless of
+<code>use-default-preprocessors</code> that <code>links</code> it will run.</li>
 </ul>
+</li>
+</ul>
+<a class="header" href="#configuring-preprocessors" id="configuring-preprocessors"><h2>Configuring Preprocessors</h2></a>
 <p>The following preprocessors are available and included by default:</p>
 <ul>
-<li><code>links</code>: Expand the <code>{{# playpen}}</code> and <code>{{# include}}</code> handlebars helpers in
-a chapter.</li>
+<li><code>links</code>: Expand the <code>{{ #playpen }}</code> and <code>{{ #include }}</code> handlebars
+helpers in a chapter to include the contents of a file.</li>
 <li><code>index</code>: Convert all chapter files named <code>README.md</code> into <code>index.md</code>. That is
 to say, all <code>README.md</code> would be rendered to an index file <code>index.html</code> in the
 rendered book.</li>
@@ -204,8 +233,34 @@ rendered book.</li>
 <pre><code class="language-toml">[build]
 build-dir = &quot;build&quot;
 create-missing = false
-preprocess = [&quot;links&quot;, &quot;index&quot;]
+
+[preprocess.links]
+
+[preprocess.index]
 </code></pre>
+<a class="header" href="#custom-preprocessor-configuration" id="custom-preprocessor-configuration"><h3>Custom Preprocessor Configuration</h3></a>
+<p>Like renderers, preprocessor will need to be given its own table (e.g.
+<code>[preprocessor.mathjax]</code>). In the section, you may then pass extra
+configuration to the preprocessor by adding key-value pairs to the table.</p>
+<p>For example</p>
+<pre><code>[preprocess.links]
+# set the renderers this preprocessor will run for
+renderers = [&quot;html&quot;]
+some_extra_feature = true
+</code></pre>
+<a class="header" href="#locking-a-preprocessor-dependency-to-a-renderer" id="locking-a-preprocessor-dependency-to-a-renderer"><h4>Locking a Preprocessor dependency to a renderer</h4></a>
+<p>You can explicitly specify that a preprocessor should run for a renderer by
+binding the two together.</p>
+<pre><code>[preprocessor.mathjax]
+renderers = [&quot;html&quot;]  # mathjax only makes sense with the HTML renderer
+</code></pre>
+<a class="header" href="#provide-your-own-command" id="provide-your-own-command"><h3>Provide Your Own Command</h3></a>
+<p>By default when you add a <code>[preprocessor.foo]</code> table to your <code>book.toml</code> file,
+<code>mdbook</code> will try to invoke the <code>mdbook-foo</code> executa<code>ble. If you want to use a different program name or pass in command-line arguments, this behaviour can be overridden by adding a</code>command` field.</p>
+<pre><code class="language-toml">[preprocessor.random]
+command = &quot;python random.py&quot;
+</code></pre>
+<a class="header" href="#configuring-renderers" id="configuring-renderers"><h2>Configuring Renderers</h2></a>
 <a class="header" href="#html-renderer-options" id="html-renderer-options"><h3>HTML renderer options</h3></a>
 <p>The HTML renderer has a couple of options as well. All the options for the
 renderer need to be specified under the TOML table <code>[output.html]</code>.</p>
@@ -214,6 +269,8 @@ renderer need to be specified under the TOML table <code>[output.html]</code>.</
 <li><strong>theme:</strong> mdBook comes with a default theme and all the resource files needed
 for it. But if this option is set, mdBook will selectively overwrite the theme
 files with the ones found in the specified folder.</li>
+<li><strong>default-theme:</strong> The theme color scheme to select by default in the
+'Change Theme' dropdown. Defaults to <code>light</code>.</li>
 <li><strong>curly-quotes:</strong> Convert straight quotes to curly quotes, except for those
 that occur in code blocks and code spans. Defaults to <code>false</code>.</li>
 <li><strong>google-analytics:</strong> If you use Google Analytics, this option lets you enable
@@ -231,6 +288,10 @@ those labels. Defaults to <code>false</code>.</li>
 <li><strong>playpen:</strong> A subtable for configuring various playpen settings.</li>
 <li><strong>search:</strong> A subtable for configuring the in-browser search functionality.
 mdBook must be compiled with the <code>search</code> feature enabled (on by default).</li>
+<li><strong>git_repository_url:</strong>  A url to the git repository for the book. If provided
+an icon link will be output in the menu bar of the book.</li>
+<li><strong>git_repository_icon:</strong> The FontAwesome icon class to use for the git
+repository link. Defaults to <code>fa-github</code>.</li>
 </ul>
 <p>Available configuration options for the <code>[output.html.playpen]</code> table:</p>
 <ul>
@@ -261,7 +322,7 @@ level or less. Defaults to <code>3</code>. (<code>### This is a level 3 heading<
 <li><strong>copy-js:</strong> Copy JavaScript files for the search implementation to the output
 directory. Defaults to <code>true</code>.</li>
 </ul>
-<p>This shows all available options in the <strong>book.toml</strong>:</p>
+<p>This shows all available HTML output options in the <strong>book.toml</strong>:</p>
 <pre><code class="language-toml">[book]
 title = &quot;Example book&quot;
 authors = [&quot;John Doe&quot;, &quot;Jane Doe&quot;]
@@ -296,6 +357,14 @@ expand = true
 heading-split-level = 3
 copy-js = true
 </code></pre>
+<a class="header" href="#custom-renderers" id="custom-renderers"><h3>Custom Renderers</h3></a>
+<p>A custom renderer can be enabled by adding a <code>[output.foo]</code> table to your
+<code>book.toml</code>. Similar to <a href="#configuring-preprocessors">preprocessors</a> this will
+instruct <code>mdbook</code> to pass a representation of the book to <code>mdbook-foo</code> for
+rendering.</p>
+<p>Custom renderers will have access to all configuration within their table
+(i.e. anything under <code>[output.foo]</code>), and the command to be invoked can be
+manually specified with the <code>command</code> field.</p>
 <a class="header" href="#environment-variables" id="environment-variables"><h2>Environment Variables</h2></a>
 <p>All configuration values can be overridden from the command line by setting the
 corresponding environment variable. Because many operating systems restrict
