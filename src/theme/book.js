@@ -52,6 +52,14 @@ function playpen_text(playpen) {
             let code_block = playpen_block.querySelector("code");
             if (code_block.classList.contains("editable")) {
                 let editor = window.ace.edit(code_block);
+                editor.commands.addCommand({
+                    name: "run",
+                    bindKey: {
+                        win: "Ctrl-Enter",
+                        mac: "Ctrl-Enter"
+                    },
+                    exec: run_rust_code(code_block)
+                });
                 editor.addEventListener("change", function (e) {
                     update_play_button(playpen_block, playground_crates);
                 });
